@@ -1,0 +1,51 @@
+{
+  "short_name": "I.I.S.S. 'P. L. Nervi - Alaimo'",
+  "name": "Istituto d'Istruzione Superiore Statale 'P. L. Nervi - Alaimo' - Lentini (SR)",
+  "description": "Istituto d'Istruzione Superiore Statale 'P. L. Nervi - Alaimo' - Lentini (SR)",
+  "icons": [
+    {
+        "src": "/icons/icon-48x48.png",
+        "type": "image/png",
+        "sizes": "48x48",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "density": "1.5",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icons/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "density": "2.0",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "density": "3.0",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "density": "4.0"
+    },
+    {
+        "src": "/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "density": "5.0"
+    }
+  ],
+  "start_url": "https://www.istitutonervialaimo.edu.it",
+  "display": "browser",
+  "theme_color": "#113448",
+  "background_color": "#FFFFFF",
+  "scope": "/"
+}

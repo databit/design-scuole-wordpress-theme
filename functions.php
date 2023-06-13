@@ -98,9 +98,6 @@ require get_template_directory() . '/inc/import.php';
  */
 require get_template_directory() . '/inc/dompdf.php';
 
-
-
-
 if ( ! function_exists( 'dsi_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -294,20 +291,47 @@ function add_menu_link_class( $atts, $item, $args ) {
 	}
 	return $atts;
   }
-  add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
+add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 
 
 /**
  * Consenti ricerca per argomenti/tags con tutti i content types
  */
 function add_tags_to_all_content_types( $query ) {
-  if ( is_admin() || ! $query->is_main_query() ) {
-    return;
-  }
+    if ( is_admin() || ! $query->is_main_query() ) {
+        return;
+    }
 
-  if($query->is_tag && $query->is_main_query()){
-    $query->set('post_type', array('documento','luogo','struttura','page','servizio','indirizzo','evento','post','circolare','scheda_didattica','scheda_progetto','materia'));
-  }
+    if($query->is_tag && $query->is_main_query()){
+        $query->set('post_type', array('documento','luogo','struttura','page','servizio','indirizzo','evento','post','circolare','scheda_didattica','scheda_progetto','materia'));
+    }
 }
 
 add_action( 'pre_get_posts', 'add_tags_to_all_content_types' );
+
+//add service worker
+function register_my_service_worker () {
+  echo "<script>navigator.serviceWorker.register('". get_template_directory_uri() ."/scripts/service-worker.js')</script>\n";
+}
+
+add_action ( 'wp_head', 'register_my_service_worker' );
+
+//add apple touch icon
+function add_apple_touch_icons() {
+    echo "<link rel=\"apple-touch-icon\" href=\"". get_template_directory_uri() ."/icons/icon-48x48.png\" />\n
+          <link rel=\"apple-touch-icon\" sizes=\"48x48\" href=\"". get_template_directory_uri() ."/assets/logo-icons/icon-48x48.png\" />\n
+          <link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"". get_template_directory_uri() ."/assets/logo-icons/icon-72x72.png\" />\n
+          <link rel=\"apple-touch-icon\" sizes=\"96x96\" href=\"". get_template_directory_uri() ."/assets/logo-icons/icon-96x96.png\" />\n
+          <link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"". get_template_directory_uri() ."/assets/logo-icons/icon-144x144.png\" />\n
+          <link rel=\"apple-touch-icon\" sizes=\"162x162\" href=\"". get_template_directory_uri() ."/assets/logo-icons/icon-162x162.png\" />\n
+          <link rel=\"apple-touch-icon\" sizes=\"192x192\" href=\"". get_template_directory_uri() ."/assets/logo-icons/icon-192x192.png\" />\n
+          <link rel=\"apple-touch-icon\" sizes=\"512x512\" href=\"". get_template_directory_uri() ."/assets/logo-icons/icon-512x512.png\" />\n";
+}
+add_action( 'wp_head', 'add_apple_touch_icons' );
+
+//add manifest file
+function inc_manifest_link()  {
+    echo "<link rel=\"manifest\" href=\"". get_template_directory_uri() ."/manifest.json\">\n";
+}
+add_action( 'wp_head', 'inc_manifest_link' );
+?>
