@@ -24,7 +24,6 @@ if($visualizza_banner == "si") {
                                                 <figure class="text-center px-2">
                                                     <img 
                                                     src="<?php echo $image_url; ?>" 
-                                                    style="max-width: 100%;" 
                                                     alt="<?php echo $image_alt; ?>" />
                                                 </figure>
                                             <?php if($banner["url"] != "") echo '</a>'; ?>

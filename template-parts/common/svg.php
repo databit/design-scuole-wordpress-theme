@@ -1,6 +1,6 @@
 <!-- svg vault -->
 <div class="svg-vault d-none">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  aria-label="Icone">
       <defs>
         <symbol id="svg-user" viewBox="0 0 32 32">
           <rect x="0" y="0.035" width="32" height="32" style="fill:none;" />
