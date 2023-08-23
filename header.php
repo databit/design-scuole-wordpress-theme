@@ -19,7 +19,9 @@ $theme_locations = get_nav_menu_locations();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<?php wp_head(); ?>
+    <meta name="theme-color" content="#FFFFFF"/>
+    <meta name="description" content="Il sito dell'Istituto di istruzione Seconsaria Superiore 'P. L. Nervi - Alaimo' di Lentini (SR)" />
+     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
@@ -29,8 +31,8 @@ $theme_locations = get_nav_menu_locations();
 ?>
 
 <!-- Right menu element-->
-<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right perfect-scrollbar">
-    <div class="menu-user-mobile menu-user-blue">
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right perfect-scrollbar" aria-label="apri il menu laterale utente" role="navigation"> 
+    <div class="menu-user-mobile menu-user-blue" aria-label="User" role="button">
     </div>
 </nav>
 <!-- End Right menu element-->
@@ -44,9 +46,9 @@ if(is_search() || is_archive())
 
 <?php $active_page = dsi_get_current_group(); ?>
 
-<div id="main-wrapper" class="push_container" id="page_top">
+<div id="main-wrapper" class="push_container" id="page_top" aria-label="Pagina principale" role="main">
     <?php get_template_part("template-parts/common/skiplink"); ?>
-    <header id="main-header" class="bg-white">
+    <header id="main-header" class="bg-white" role="banner">
         <?php get_template_part("template-parts/header/slimheader"); ?>
         <div class="container header-top">
             <div class="row variable-gutters">
@@ -69,7 +71,7 @@ if(is_search() || is_archive())
                             </div>
                         </div><!-- /logo-header -->
                         <div class="nav-list-mobile dl-menuwrapper">
-                            <nav aria-label="Principale">
+                            <nav aria-label="Principale" role="navigation">
                                 <ul class="dl-menu nav-list nav-list-primary" data-element="menu">
                                     <?php
                                     // check if scuola has menu
@@ -202,7 +204,7 @@ if(is_search() || is_archive())
                     </div>
                     <!-- End Left menu element-->
                     <div class="logo-header">
-						<?php get_template_part("template-parts/common/logo"); ?>
+                        <?php get_template_part("template-parts/common/logo"); ?>
                         <div class="h1">
                             <a href="<?php echo home_url(); ?>" aria-label="Vai alla homepage" title="vai alla homepage" >
                                 <span><?php echo dsi_get_option("tipologia_scuola"); ?></span>
@@ -220,7 +222,7 @@ if(is_search() || is_archive())
                     <div class="header-search d-flex align-items-center">
                         <button type="button" class="d-flex align-items-center search-btn" data-toggle="modal" data-target="#search-modal" aria-label="Cerca nel sito" data-element="search-modal-button">
                             <span class="d-none d-lg-block mr-2"><strong>Cerca</strong></span>
-                            <svg class="svg-search">
+                            <svg class="svg-search" aria-label="Ricerca">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-search"></use>
                             </svg>
                         </button>

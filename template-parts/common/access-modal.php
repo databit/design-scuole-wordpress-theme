@@ -35,6 +35,17 @@
                                 <div class="access-login">
                                     <h3><?php _e("Personale scolastico", "design_scuole_italia"); ?></h3>
                                     <p class="text-large"><?php _e("Entra nel sito della scuola con le tue credenziali per gestire contenuti, visualizzare circolari e altre funzionalità.", "design_scuole_italia"); ?></p>
+                                    <div class="form-group my-0">
+                                        <div class="wp_google_login">
+                                            <div class="wp_google_login__button-container">
+                                                <a class="wp_google_login__button text-dark" href="https://accounts.google.com/o/oauth2/auth?client_id=829455552241-9511cv357t1q4u639nqcdhs983b8qkc6.apps.googleusercontent.com&#038;redirect_uri=https%3A%2F%2Fwww.istitutonervialaimo.edu.it%2Fwp-login.php&#038;state=eyJub25jZSI6IjEzNTViMDNlYmEiLCJyZWRpcmVjdF90byI6Imh0dHBzOlwvXC93d3cuaXN0aXR1dG9uZXJ2aWFsYWltby5lZHUuaXRcL3dwLWFkbWluXC8iLCJwcm92aWRlciI6Imdvb2dsZSJ9&#038;scope=email+profile+openid&#038;access_type=online&#038;response_type=code">
+                                                    <span class="wp_google_login__google-icon"></span>
+                                                    Accedi con Google
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="access-login-form">
                                         <div class="form-group">
                                             <label for="login-email-field">Email address</label>
